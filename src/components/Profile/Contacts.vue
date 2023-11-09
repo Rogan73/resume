@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="card_subheader">
-                    {{ store.profile.profession }}
+                    Contacts
         </div>
         <div class="card_content">
             <div class="circle">

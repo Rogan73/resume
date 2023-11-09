@@ -7,11 +7,11 @@
       <Profile></Profile>
     </div>
 
-    <main>
+    <div class="rightSection">
       <Experience />
-    </main>
+    </div>
 
-    
+
   </div>
 </div>
 
