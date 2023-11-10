@@ -4,9 +4,9 @@
             Education
         </div>
 
-        <div class="card_content" v-for="(item, i) in store.profile.education" :key="i">
+        <div class="card_content" v-for="(item, i) in profile?.education" :key="i">
 
-            <div class="rpic">
+            <!-- <div class="rpic">
                 <div class="pic">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2.0537 12.8871C2.8351 12.1057 3.89491 11.6667 4.99998 11.6667H9.99998C11.105 11.6667 12.1649 12.1057 12.9463 12.8871C13.7277 13.6685 14.1666 14.7283 14.1666 15.8333V17.5C14.1666 17.9602 13.7936 18.3333 13.3333 18.3333C12.8731 18.3333 12.5 17.9602 12.5 17.5V15.8333C12.5 15.1703 12.2366 14.5344 11.7677 14.0656C11.2989 13.5967 10.663 13.3333 9.99998 13.3333H4.99998C4.33694 13.3333 3.70105 13.5967 3.23221 14.0656C2.76337 14.5344 2.49998 15.1703 2.49998 15.8333V17.5C2.49998 17.9602 2.12688 18.3333 1.66665 18.3333C1.20641 18.3333 0.833313 17.9602 0.833313 17.5V15.8333C0.833313 14.7283 1.2723 13.6685 2.0537 12.8871Z" fill="#FCFCFD"/>
@@ -16,7 +16,9 @@
                     </svg>
                 </div>    
 
-            </div>
+            </div> -->
+
+            <span class="material-symbols-outlined i_gray">school</span>
 
             <div class="card_main">
                 <div class="">{{ item.title }}</div>
@@ -30,6 +32,8 @@
    
 <script setup>
 import { useProfileStore } from '../../stores/profile'
+import { storeToRefs } from "pinia"
 const store = useProfileStore()
+const { profile } = storeToRefs(store);
 
 </script>

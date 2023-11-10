@@ -4,10 +4,11 @@
             <img class="card_img" src="pics/profile.png" alt="">
             <div class="card_main">
                 <div class="card_header">
-                    {{ store.profile.MyName }}
+                    {{ profile?.MyName }} 
                 </div>
                 <div class="card_subheader">
-                    {{ store.profile.profession }}
+                    {{ profile?.profession }} 
+                     
                 </div>
             </div>
         </div>
@@ -15,7 +16,14 @@
 </template>
    
 <script setup>
+import { ref, onMounted,computed} from 'vue'
 import { useProfileStore } from '../../stores/profile'
+import { storeToRefs } from "pinia";
 const store = useProfileStore()
+const { profile } = storeToRefs(store);
+
+
+
+
 
 </script>

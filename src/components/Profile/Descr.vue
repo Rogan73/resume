@@ -3,7 +3,7 @@
         <div class="card_content">
             
             <div class="card_main">
-                {{store.profile.descr}}
+                {{profile?.descr}}
             </div>
         </div>
         <div class="quotes">
@@ -17,6 +17,7 @@
    
 <script setup>
 import { useProfileStore } from '../../stores/profile'
+import { storeToRefs } from "pinia"
 const store = useProfileStore()
-
+const { profile } = storeToRefs(store);
 </script>

@@ -1,104 +1,109 @@
 {
-    "MyName": "Oleksandr Rohan",
-    "profession": "Software Developer",
-    "dateOfBirth": "1973-04-11",
-    "address": "Spain, Valencia",
-    "email": "rogan73@ukr.net",
-    "telegram": "t.me/OlexandrRohan",
-    "descr": "Adept at design thinking, I love studying and analyzing applications. I believe that design is the ability to fit into the user's shoes",
-    "portfolio": "RikoSoft",
-    "langs": [
-      {
-        "name": "Ukranian",
-        "level": "Native"
-      },
-      {
-        "name": "Russian",
-        "level": "Native"
-      },
-      {
-        "name": "Spainsh",
-        "level": "B2"
-      },
-      {
-        "name": "English",
-        "level": "Read docs"
-      }
-    ],
-    "education": [
-      {
-        "title": "Academy",
-        "description": "Advertising and public relations specialist"
-      },
-      {
-        "title": "Academy2",
-        "description": "Advertising and public relations specialist"
-      },
-      {
-        "title": "Academy3",
-        "description": "Advertising and public relations specialist"
-      }
-    ],
-    "experienxe": [
-      {
-        "pic": "",
-        "title": "Senior Product Designer",
-        "description": "NDA - (cryptocurrency betting, gambling)",
-        "tasks": [
-          "I am responsible for the entire product design",
-          "Designing cross-platform interfaces",
-          "Interaction with productologists and managers",
-          "Creating a design system from scratch",
-          "Building a workflow through Agile and SCRUM methodologies",
-          "Demo, revue, retro"
-        ],
-        "location": "Kiev",
-        "period": "January 2023 - present"
-      },
-      {
-        "pic": "",
-        "title": "Senior Product Designer",
-        "description": "NDA - (cryptocurrency betting, gambling)",
-        "tasks": [
-          "I am responsible for the entire product design",
-          "Designing cross-platform interfaces",
-          "Interaction with productologists and managers",
-          "Creating a design system from scratch",
-          "Building a workflow through Agile and SCRUM methodologies",
-          "Demo, revue, retro"
-        ],
-        "location": "Kiev",
-        "period": "January 2023 - present"
-      },
-      {
-        "pic": "",
-        "title": "Senior Product Designer",
-        "description": "NDA - (cryptocurrency betting, gambling)",
-        "tasks": [
-          "I am responsible for the entire product design",
-          "Designing cross-platform interfaces",
-          "Interaction with productologists and managers",
-          "Creating a design system from scratch",
-          "Building a workflow through Agile and SCRUM methodologies",
-          "Demo, revue, retro"
-        ],
-        "location": "Kiev",
-        "period": "January 2023 - present"
-      },
-      {
-        "pic": "",
-        "title": "Senior Product Designer",
-        "description": "NDA - (cryptocurrency betting, gambling)",
-        "tasks": [
-          "I am responsible for the entire product design",
-          "Designing cross-platform interfaces",
-          "Interaction with productologists and managers",
-          "Creating a design system from scratch",
-          "Building a workflow through Agile and SCRUM methodologies",
-          "Demo, revue, retro"
-        ],
-        "location": "Kiev",
-        "period": "January 2023 - present"
-      }
-    ]
-  }
+  "MyName": "Oleksandr Rohan",
+  "profession": "Software Developer",
+  "dateOfBirth": "1973-04-11",
+  "address": "Spain, Valencia",
+  "tel": "+34 622683447",
+  "email": "rogan73@ukr.net",
+  "telegram": "t.me/OlexandrRohan",
+  "descr": "I am inspired by the development of new programs. I like it when my work is useful. I try to solve all assigned tasks in a short time and with high quality.",
+  "portfolio": "RikoSoft",
+  "langs": [
+    {
+      "name": "Ukranian",
+      "level": "Native"
+    },
+    {
+      "name": "Russian",
+      "level": "Native"
+    },
+    {
+      "name": "Spainsh",
+      "level": "B2"
+    },
+    {
+      "name": "English",
+      "level": "Read docs"
+    }
+  ],
+  "education": [
+    {
+      "title": "Academy",
+      "description": "Advertising and public relations specialist"
+    },
+    {
+      "title": "Academy2",
+      "description": "Advertising and public relations specialist"
+    },
+    {
+      "title": "Academy3",
+      "description": "Advertising and public relations specialist"
+    }
+  ],
+  "experiense": [
+    {
+      "icon": "code_blocks",
+      "iconColor": "#00C74F",
+      "title": "Desktop and Web Developer",
+      "description": "Delphi, SQL,Firebird, MySQL, PHP, HTML, CSS, JS, Vue",
+      "tasks": [
+        "I am responsible for the LIBRO sales system",
+        "Development and implementation of new system modules",
+        "Connecting varios devices to project (COM, USB, Ethernet)",
+        "Interaction our system with varios descount and payment APIs",
+        "Creating and promotion of advertising",
+        "Support of integration dealers"
+      ],
+      "location": "Kherson, Barcelona, Valencia",
+      "period": "October 2000 - present"
+    },
+    {
+      "icon": "engineering",
+      "iconColor": "#9C27B0",
+      "title": "Senior Product Designer",
+      "description": "NDA - (cryptocurrency betting, gambling)",
+      "tasks": [
+        "I am responsible for the entire product design",
+        "Designing cross-platform interfaces",
+        "Interaction with productologists and managers",
+        "Creating a design system from scratch",
+        "Building a workflow through Agile and SCRUM methodologies",
+        "Demo, revue, retro"
+      ],
+      "location": "Kiev",
+      "period": "January 2023 - present"
+    },
+    {
+      "icon": "code_blocks",
+      "iconColor": "#00C74F",
+      "title": "Senior Product Designer",
+      "description": "NDA - (cryptocurrency betting, gambling)",
+      "tasks": [
+        "I am responsible for the entire product design",
+        "Designing cross-platform interfaces",
+        "Interaction with productologists and managers",
+        "Creating a design system from scratch",
+        "Building a workflow through Agile and SCRUM methodologies",
+        "Demo, revue, retro"
+      ],
+      "location": "Kiev",
+      "period": "January 2023 - present"
+    },
+    {
+      "icon": "code_blocks",
+      "iconColor": "#00C74F",
+      "title": "Senior Product Designer",
+      "description": "NDA - (cryptocurrency betting, gambling)",
+      "tasks": [
+        "I am responsible for the entire product design",
+        "Designing cross-platform interfaces",
+        "Interaction with productologists and managers",
+        "Creating a design system from scratch",
+        "Building a workflow through Agile and SCRUM methodologies",
+        "Demo, revue, retro"
+      ],
+      "location": "Kiev",
+      "period": "January 2023 - present"
+    }
+  ]
+}

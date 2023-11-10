@@ -12,7 +12,7 @@
 
             <div class="card_main">
                 <div class="card_subsub">Projects</div>
-                <RouterLink to="/projects">{{store.profile.portfolio}}</RouterLink>
+                <RouterLink to="/projects">{{profile?.portfolio}}</RouterLink>
                 
             </div>
         </div>
@@ -21,6 +21,7 @@
    
 <script setup>
 import { useProfileStore } from '../../stores/profile'
+import { storeToRefs } from "pinia"
 const store = useProfileStore()
-
+const { profile } = storeToRefs(store);
 </script>

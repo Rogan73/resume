@@ -5,17 +5,19 @@
         </div>
         <div class="card_content">
             <div class="circle">
-                <div class="pic">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                
+                    <span class="material-symbols-outlined i_gray">mail</span>
+
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33331 4.16667C2.87308 4.16667 2.49998 4.53976 2.49998 5V15C2.49998 15.4602 2.87308 15.8333 3.33331 15.8333H16.6666C17.1269 15.8333 17.5 15.4602 17.5 15V5C17.5 4.53976 17.1269 4.16667 16.6666 4.16667H3.33331ZM0.833313 5C0.833313 3.61929 1.9526 2.5 3.33331 2.5H16.6666C18.0474 2.5 19.1666 3.61929 19.1666 5V15C19.1666 16.3807 18.0474 17.5 16.6666 17.5H3.33331C1.9526 17.5 0.833313 16.3807 0.833313 15V5Z" fill="#A1A1A9"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M0.963349 5.38641C1.21019 4.99796 1.72519 4.88317 2.11363 5.13001L9.58599 9.87833C9.71022 9.95568 9.85365 9.99669 10 9.99669C10.1464 9.99669 10.2898 9.95568 10.4141 9.87833C10.4147 9.87794 10.4153 9.87755 10.4159 9.87717L17.8864 5.13001C18.2749 4.88317 18.7899 4.99796 19.0367 5.38641C19.2835 5.77485 19.1687 6.28985 18.7803 6.53669L11.3008 11.2895C10.9109 11.5338 10.4601 11.6634 10 11.6634C9.53993 11.6634 9.08914 11.5338 8.69925 11.2895L8.69474 11.2867L1.21975 6.53669C0.831307 6.28985 0.716511 5.77485 0.963349 5.38641Z" fill="#A1A1A9"/>
-                </svg>
-               </div>
+                </svg> -->
+               
 
             </div>
             <div class="card_main">
                 <div class="card_subsub">Email</div>
-                <div class="">{{store.profile.email}}</div>
+                <div class="">{{profile?.email}}</div>
             </div>
         </div>
 
@@ -35,29 +37,44 @@
                     </defs>
                     </svg>
                </div>
+               <!-- <span class="material-symbols-outlined i_gray">send</span> -->
 
             </div>
             <div class="card_main">
                 <div class="card_subsub">Telegram</div>
-                <a class="">{{store.profile.telegram}}</a>
+                <a class="">{{profile?.telegram}}</a>
             </div>
         </div>
 
         <div class="card_content">
             <div class="circle">
-                <div class="pic">
+                <!-- <div class="pic">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2.50001C8.4529 2.50001 6.96917 3.11459 5.87521 4.20855C4.78125 5.30252 4.16667 6.78625 4.16667 8.33334C4.16667 10.5042 5.64206 12.8013 7.28951 14.6547C8.09368 15.5594 8.90045 16.316 9.50709 16.8468C9.69266 17.0092 9.85894 17.1499 10 17.2668C10.1411 17.1499 10.3073 17.0092 10.4929 16.8468C11.0995 16.316 11.9063 15.5594 12.7105 14.6547C14.3579 12.8013 15.8333 10.5042 15.8333 8.33334C15.8333 6.78625 15.2188 5.30252 14.1248 4.20855C13.0308 3.11459 11.5471 2.50001 10 2.50001ZM10 18.3333C9.5 19 9.49982 18.9999 9.49961 18.9997L9.49907 18.9993L9.49753 18.9982L9.49264 18.9945L9.47576 18.9816C9.4614 18.9707 9.4409 18.955 9.41465 18.9346C9.36218 18.894 9.28671 18.8348 9.19155 18.7583C9.00129 18.6054 8.73185 18.3831 8.40958 18.1011C7.76622 17.5382 6.90632 16.7323 6.04383 15.762C4.35794 13.8654 2.5 11.1625 2.5 8.33334C2.5 6.34422 3.29018 4.43657 4.6967 3.03004C6.10322 1.62352 8.01088 0.833344 10 0.833344C11.9891 0.833344 13.8968 1.62352 15.3033 3.03004C16.7098 4.43657 17.5 6.34422 17.5 8.33334C17.5 11.1625 15.6421 13.8654 13.9562 15.762C13.0937 16.7323 12.2338 17.5382 11.5904 18.1011C11.2681 18.3831 10.9987 18.6054 10.8085 18.7583C10.7133 18.8348 10.6378 18.894 10.5853 18.9346C10.5591 18.955 10.5386 18.9707 10.5242 18.9816L10.5074 18.9945L10.5025 18.9982L10.5009 18.9993L10.5004 18.9997C10.5002 18.9999 10.5 19 10 18.3333ZM10 18.3333L10.5 19C10.2037 19.2222 9.7963 19.2222 9.5 19L10 18.3333Z" fill="#A1A1A9"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6.66667C9.07955 6.66667 8.33335 7.41286 8.33335 8.33333C8.33335 9.25381 9.07955 10 10 10C10.9205 10 11.6667 9.25381 11.6667 8.33333C11.6667 7.41286 10.9205 6.66667 10 6.66667ZM6.66669 8.33333C6.66669 6.49238 8.15907 5 10 5C11.841 5 13.3334 6.49238 13.3334 8.33333C13.3334 10.1743 11.841 11.6667 10 11.6667C8.15907 11.6667 6.66669 10.1743 6.66669 8.33333Z" fill="#A1A1A9"/>
                     </svg>
-               </div>
+               </div> -->
+
+               <span class="material-symbols-outlined i_gray">location_on</span>
 
             </div>
             <div class="card_main">
                 <div class="card_subsub">Address</div>
-                <div class="">{{store.profile.address}}</div>
+                <div class="">{{profile?.address}}</div>
             </div>
-        </div>        
+        </div>       
+
+
+        <div class="card_content">
+            <div class="circle">
+               <span class="material-symbols-outlined i_gray">smartphone</span>
+
+            </div>
+            <div class="card_main">
+                <div class="card_subsub">Phone</div>
+                <div class="">{{profile?.tel}}</div>
+            </div>
+        </div>         
 
 
     </div>
@@ -65,6 +82,7 @@
    
 <script setup>
 import { useProfileStore } from '../../stores/profile'
+import { storeToRefs } from "pinia"
 const store = useProfileStore()
-
+const { profile } = storeToRefs(store);
 </script>

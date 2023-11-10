@@ -1,10 +1,18 @@
 
 
 <template>
-  <header>
+  <header >
+    
       <nav>
-        <RouterLink to="/">Resume</RouterLink>
-        <RouterLink to="/projects">Projects</RouterLink>
+
+
+        <div>
+          <RouterLink to="/">Resume</RouterLink>
+          <RouterLink to="/projects">Projects</RouterLink>
+        </div>
+        
+        <ChangeLanguage />
+        
       </nav>
    
   </header>
@@ -15,6 +23,16 @@
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import ChangeLanguage from './components/ChangeLanguage.vue'
+
+import {onMounted} from 'vue'
+import { useProfileStore } from './stores/profile'
+const store = useProfileStore()
+
+onMounted(() => {
+  store.LoadProfileFromJSON()
+})
+
 
 </script>
 
