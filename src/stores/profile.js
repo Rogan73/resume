@@ -1,4 +1,4 @@
-import { ref ,computed } from 'vue'
+import { ref  } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useProfileStore = defineStore('ProfileStore', () => {
@@ -33,9 +33,11 @@ export const useProfileStore = defineStore('ProfileStore', () => {
     try {
       const response = await fetch(`/profiles/${userId}/${SelectedLang}.json`);
       if (!response.ok) {
-        throw new Error('Failed to load profile');
+        throw new Error('Failed to load user profile');
       }
       profile.value = await response.json();
+
+  //console.log('profile',profile.value);
 
     } catch (error) {
       console.error(error);

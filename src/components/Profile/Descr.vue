@@ -16,8 +16,7 @@
 </template>
    
 <script setup>
-import { useProfileStore } from '../../stores/profile'
-import { storeToRefs } from "pinia"
-const store = useProfileStore()
-const { profile } = storeToRefs(store);
+import { mxProfile } from '@/mixins/mxProfile';
+const { profile } = mxProfile();
+
 </script>

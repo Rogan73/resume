@@ -1,33 +1,44 @@
 
 
 <template>
-  <header >
+  <div class="header">
     
-      <nav>
+      <div class="nav">
 
 
-        <div>
-          <RouterLink to="/">Resume</RouterLink>
-          <RouterLink to="/projects">Projects</RouterLink>
+        <div class="items" >
+          <RouterLink :to=" `/?id=${store.userId}`">Resume</RouterLink>
+          <RouterLink :to="`/projects?id=${store.userId}`">Projects</RouterLink>
+          <RouterLink :to="`/edit?id=${store.userId}`">Edit</RouterLink>
         </div>
-        
+
         <ChangeLanguage />
         
-      </nav>
+      </div>
    
-  </header>
+  </div>
 
-  <RouterView />
+  <div class="pages">
+     <RouterView  />
+  </div>
+
 </template>
 
 
 <script setup>
+
 import { RouterLink, RouterView } from 'vue-router'
 import ChangeLanguage from './components/ChangeLanguage.vue'
-
 import {onMounted} from 'vue'
-import { useProfileStore } from './stores/profile'
-const store = useProfileStore()
+
+ import { useProfileStore } from './stores/profile'
+// import { storeToRefs } from "pinia";
+ const store = useProfileStore()
+
+// const { profile } = storeToRefs(store);
+
+
+
 
 onMounted(() => {
   store.LoadProfileFromJSON()

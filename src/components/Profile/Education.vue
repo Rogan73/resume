@@ -36,4 +36,6 @@ import { storeToRefs } from "pinia"
 const store = useProfileStore()
 const { profile } = storeToRefs(store);
 
+
+
 </script>

@@ -16,13 +16,14 @@
 </template>
    
 <script setup>
-import { ref, onMounted,computed} from 'vue'
-import { useProfileStore } from '../../stores/profile'
-import { storeToRefs } from "pinia";
-const store = useProfileStore()
-const { profile } = storeToRefs(store);
 
+// import { useProfileStore } from '../../stores/profile'
+// import { storeToRefs } from "pinia";
+// const store = useProfileStore()
+// const { profile } = storeToRefs(store);
 
+import { mxProfile } from '@/mixins/mxProfile';
+const { profile } = mxProfile();
 
 
 

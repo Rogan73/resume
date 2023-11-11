@@ -3,7 +3,7 @@
         <div class="card_subheader">
                     Contacts
         </div>
-        <div class="card_content">
+        <div class="card_content" v-if="profile?.email">
             <div class="circle">
                 
                     <span class="material-symbols-outlined i_gray">mail</span>
@@ -15,14 +15,14 @@
                
 
             </div>
-            <div class="card_main">
+            <div class="card_main" >
                 <div class="card_subsub">Email</div>
                 <div class="">{{profile?.email}}</div>
             </div>
         </div>
 
 
-        <div class="card_content">
+        <div class="card_content" v-if="profile?.telegram">
             <div class="circle">
                 <div class="pic">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <div class="card_content">
+        <div class="card_content" v-if="profile?.address">
             <div class="circle">
                 <!-- <div class="pic">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -65,7 +65,7 @@
         </div>       
 
 
-        <div class="card_content">
+        <div class="card_content" v-if="profile?.tel">
             <div class="circle">
                <span class="material-symbols-outlined i_gray">smartphone</span>
 
@@ -81,8 +81,6 @@
 </template>
    
 <script setup>
-import { useProfileStore } from '../../stores/profile'
-import { storeToRefs } from "pinia"
-const store = useProfileStore()
-const { profile } = storeToRefs(store);
+import { mxProfile } from '@/mixins/mxProfile';
+const { profile } = mxProfile();
 </script>
