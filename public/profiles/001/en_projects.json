@@ -1,0 +1,51 @@
+[
+
+{
+    "id": 1,
+    "name": "LIBRO",
+    "period": "2002 - present",
+    "location": "Kherson,Barcelona,Valencia",
+    "link": "https://rikosoft.com",
+    "description":{
+        "short": "System for restaurant, bars, cafes, etc",
+        "full_html": "Libro de texto FULL"
+    },
+    "icon": {
+        "name": "engineering",
+        "color": "blue"
+    }
+},
+
+{
+    "id": 2,
+    "name": "Magnat",
+    "period": "2005 - 2006",
+    "location": "Kherson",
+    "link": "https://rikosoft.com",
+    "description":{
+        "short": "System for hotels",
+        "full_html": "Magnat de texto FULL"
+    },
+    "icon": {
+        "name": "engineering",
+        "color": "green"
+    }
+},
+
+{
+    "id": 3,
+    "name": "UPRRO",
+    "period": "2022 - present",
+    "location": "Valencia",
+    "link": "https://rikosoft.com",
+    "description":{
+        "short": "Software Fiscal cash registrator ",
+        "full_html": "UPRRO de texto FULL"
+    },
+    "icon": {
+        "name": "engineering",
+        "color": "violet"
+    }
+}
+
+]

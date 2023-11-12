@@ -1,15 +1,33 @@
 <template>
   <div class="projects">
-    <h1>This is an projects page</h1>
+    
+    <div class="RightSideProjects">
+      <LeftSideProjects/>
+    </div>
+
+    <div class="RightSideProjects">
+      <RightSideProjects/>
+    </div>
+
+
   </div>
 </template>
 
+<script setup>
+import  LeftSideProjects from '../components/Projects/LeftSide.vue'
+import  RightSideProjects from '../components/Projects/RightSide.vue'
+import {onMounted} from 'vue'
+import { useProjectsStore } from '../stores/projects'
+
+const store = useProjectsStore()
+
+onMounted(() => {
+  store.loadProjects()
+})
+
+</script>
+
 <style>
-@media (min-width: 1024px) {
-  .projects {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
+
 </style>
+

@@ -3,12 +3,12 @@
 <div class="container">
   <div class="content">
 
-    <div class="leftSection">
-      <Profile></Profile>
+    <div class="">
+      <Welcome/>
     </div>
 
-    <div class="rightSection">
-      <Experience />
+    <div class="">
+      <Authorization/>
     </div>
 
 
@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import Profile from '../components/Profile.vue'
-import Experience from '../components/Experience.vue'
+import Welcome from '../components/Welcome.vue'
+import Authorization from '../components/Authorization.vue'
 
 </script>

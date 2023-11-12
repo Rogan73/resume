@@ -11,6 +11,8 @@
    --text-text-accent: #6172F3;
    --control-control-secondary: #3F3F45;
    --icon-color-gray:#a1a1a9;
+   --surface-bg-active:#323253;
+   --surface-shadow :black;
  }
 
 
@@ -36,6 +38,7 @@
    line-height: 20px;
    /* 125% */
    cursor: pointer;
+   padding: 4px 12px;
  }
  ul{
   margin: 0;
@@ -47,7 +50,7 @@
   background: var(--surface-bg-secondary);
   padding-bottom: 0px;
   width: 100%;
-  box-shadow: 0px 2px 4px black;
+  box-shadow: 0px 2px 4px var(--surface-shadow);
   z-index: 999;
  }
 
@@ -294,11 +297,19 @@ line-height: 20px; /* 142.857% */
  }
 
  .card_main_exp {
+
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+
+  /*
    display: flex;
    align-items: flex-start;
    gap: 12px;
    align-self: stretch;
-   flex-direction: column;
+   flex-direction: column;*/
  }
 
  .rpic_exp {
@@ -376,3 +387,83 @@ line-height: 20px; /* 142.857% */
   font-family: 'Manrope', sans-serif;
   width: 95%;
  }
+
+ .router-link-active{
+  background-color: var(--surface-bg-active);
+  padding: 4px 12px;
+  border-radius: 17px;  
+ }
+
+ .btn{
+  background-color: var(--surface-bg-secondary);
+  color: var(--text-text-primary);
+  border-radius: 55px;
+  padding: 5px 20px;
+  border: 2px solid var(--surface-bg-secondary);
+  cursor: pointer;
+  margin: 10px 0px;
+  font-size: 16px;
+ }
+
+ .btn:active, .btn:hover{
+  background-color: var(--surface-bg-active);
+  border-color: var(--surface-bg-active);
+ }
+
+
+ .card_proj{
+
+  display: flex;
+  width: 370px;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: 0px;
+  /*background: var(--surface-shadow);*/
+  position: relative;
+  border: 2px solid var(--surface-bg-secondary);
+  border-radius: 16px;
+ }
+ 
+.list_items {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+
+ 
+}
+
+
+
+
+.item_default{
+ display: flex;
+ margin: 1px;
+ background-color: var(--surface-bg-main);
+ cursor: pointer;
+ padding: 10px;
+ gap: 12px;
+ border-radius: 16px ;
+}
+
+.item_default:hover,.item_default:active{
+  background-color: var(--surface-bg-secondary);
+}
+
+.item_active{
+ background-color: var(--surface-bg-active);
+}
+
+.projects {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .projects {
+    flex-direction: unset;
+  }
+}

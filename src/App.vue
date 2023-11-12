@@ -4,12 +4,14 @@
   <div class="header">
     
       <div class="nav">
-
-
+          
         <div class="items" >
-          <RouterLink :to=" `/?id=${store.userId}`">Resume</RouterLink>
-          <RouterLink :to="`/projects?id=${store.userId}`">Projects</RouterLink>
-          <RouterLink :to="`/edit?id=${store.userId}`">Edit</RouterLink>
+          <RouterLink :to="`/`">Home</RouterLink>
+          <template v-if="store.authorization">
+            <RouterLink :to="`/profile?id=${store.AuthUserId}`" >Resume</RouterLink>
+            <RouterLink :to="`/projects?id=${store.AuthUserId}`">Projects</RouterLink>
+            <RouterLink :to="`/edit?id=${store.AuthUserId}`">Edit</RouterLink>
+          </template>
         </div>
 
         <ChangeLanguage />
@@ -29,21 +31,8 @@
 
 import { RouterLink, RouterView } from 'vue-router'
 import ChangeLanguage from './components/ChangeLanguage.vue'
-import {onMounted} from 'vue'
-
- import { useProfileStore } from './stores/profile'
-// import { storeToRefs } from "pinia";
- const store = useProfileStore()
-
-// const { profile } = storeToRefs(store);
-
-
-
-
-onMounted(() => {
-  store.LoadProfileFromJSON()
-})
-
+import { useProfileStore } from './stores/profile'
+const store = useProfileStore()
 
 </script>
 
