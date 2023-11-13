@@ -7,12 +7,26 @@
           
         <div class="items" >
           <RouterLink :to="`/`">Home</RouterLink>
-          <template v-if="store.authorization">
+          <template v-if="store.AuthUserId!=''" >
             <RouterLink :to="`/profile?id=${store.AuthUserId}`" >Resume</RouterLink>
             <RouterLink :to="`/projects?id=${store.AuthUserId}`">Projects</RouterLink>
+          </template>
+
+          <template v-else >
+            <template v-if="store.userId!=''">
+              <RouterLink :to="`/profile?id=${store.userId}`" >Resume</RouterLink>
+              <RouterLink :to="`/projects?id=${store.userId}`">Projects</RouterLink>
+            </template>
+          </template>
+
+
+
+          <template v-if="store.authorization">
             <RouterLink :to="`/edit?id=${store.AuthUserId}`">Edit</RouterLink>
           </template>
         </div>
+               
+         <div>{{ store.AuthUserId }}</div>
 
         <ChangeLanguage />
         

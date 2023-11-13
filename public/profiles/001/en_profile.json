@@ -29,15 +29,18 @@
   "education": [
     {
       "title": "Academy",
-      "description": "Advertising and public relations specialist"
+      "description": "Advertising and public relations specialist",
+      "period": "2016-2018"
     },
     {
       "title": "Academy2",
-      "description": "Advertising and public relations specialist"
+      "description": "Advertising and public relations specialist",
+      "period": "2016-2018"
     },
     {
       "title": "Academy3",
-      "description": "Advertising and public relations specialist"
+      "description": "Advertising and public relations specialist",
+      "period": "2016-2018"
     }
   ],
   "experiense": [

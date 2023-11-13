@@ -1,19 +1,16 @@
 <template>
-    <div class="card">
+    <div class="card_proj_body">
         <div class="card_content">
             
            
                 <div class="" >
-                    {{projects?.title}}
+                    {{store?.selectedProject?.name}}
                 </div>
 
                 <div class="" >
-                    {{projects?.subtitle}}
+                    {{store?.selectedProject?.description?.full_html}}
                 </div>
                 
-                <div class="" >
-                    {{projects?.body}}
-                </div>
 
 
         </div>

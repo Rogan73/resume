@@ -2,7 +2,7 @@
     <div class="card_proj">
         <div class="list_items">
             
-            <template v-for="(item,i) in projects" :key="i">
+            <template v-for="(item,i) in store.projects" :key="i">
                 <div class="item_default"  
                 :class="{'item_active': store?.selectedProject?.id == item.id}"
                 @click="store.selProject(item)">
@@ -26,9 +26,9 @@
    
 <script setup>
 import { useProjectsStore } from '../../stores/projects'
-import { storeToRefs } from "pinia"
+//import { storeToRefs } from "pinia"
 const store = useProjectsStore()
-const { projects } = storeToRefs(store);
+//const { projects } = storeToRefs(store);
 
 
 

@@ -4,6 +4,7 @@ import { useProfileStore } from './profile'
 
 export const useProjectsStore = defineStore('ProjectsStore', () => {
     let profile = useProfileStore();
+    let AuthUserId = profile.AuthUserId
     let userId = profile.userId;
     let SelectedLang = profile.SelectedLang;
 
@@ -11,17 +12,36 @@ export const useProjectsStore = defineStore('ProjectsStore', () => {
     let selectedProject = ref({})
 
     const selProject = (item)=>{
-        selectedProject.value = item
+      //console.log('selProject',{...item});
+        selectedProject.value = {...item}
     }
 
   
     const loadProjects = async () => {
-        if (userId == '') {
-          return;
-        }
+
+      //console.log('loadProjects: AuthUserId:',AuthUserId);
+      //console.log('loadProjects: userId:',userId);
+
+
+        // if (AuthUserId == '') {
+        //   return;
+        // }
         try {
 
-          const response = await fetch(`/profiles/${userId}/${SelectedLang}_projects.json`);
+          let link =''
+          if (AuthUserId!="") {
+            link = `/profiles/${AuthUserId}/${SelectedLang}_projects.json`
+          }else{
+             if (userId!="") {
+              link = `/profiles/${userId}/${SelectedLang}_projects.json`
+             }else{
+              return
+             }
+          }
+
+
+
+          const response = await fetch(link);
           if (!response.ok) {
             throw new Error('Failed to load user projects');
           }

@@ -1,7 +1,7 @@
 <template>
   <div class="projects">
     
-    <div class="RightSideProjects">
+    <div class="LeftSideProjects">
       <LeftSideProjects/>
     </div>
 

@@ -1,51 +1,39 @@
 <template>
-    <!-- <h1>This is EDIT page: {{ profile?.MyName }}</h1> -->
-    <div class="edit">
-      
-
-         <div class="card">
-           <div class="card_title">Name</div>
-           <input name="name"   v-model="profile.MyName" />
-           <div class="card_title">Professon</div>
-           <input name="prof"   v-model="profile.profession"/>
-        </div>
-
-
-        <div class="card">
-           <div class="card_title">Description</div>
-           <textarea name="descr"   v-model="profile.descr"></textarea>
-        </div>
-
-
-        <div class="card">
-           <div class="card_title">Contacts</div>
-           <div class="grup">
-            <div class="card_subsub lbl">Email</div> 
-             <input name="email"   v-model="profile.email" />
-           </div>
-
-           <div class="grup">
-             <div class="card_subsub lbl">Telegram</div>
-             <input name="telegram"   v-model="profile.telegram"/>
-           </div>
-
-           <div class="grup">
-             <div class="card_subsub lbl">Address</div>
-             <input name="telegram"   v-model="profile.address"/>
-           </div>
-
-           <div class="grup">
-             <div class="card_subsub lbl">Phone</div>
-             <input name="telegram"   v-model="profile.tel"/>
-           </div>           
-
-
-        </div>        
-        
+  
+    <div class="LeftSideEdit">
+      <LeftSideEdit/>
     </div>
+
+    <div class="columns">
+
+    <div class="RightSideEdit">
+      
+        <div class="edit">
+
+            <Name id="el_ed_main"/>
+            <Descr id="el_ed_descr"/>
+            <Contacts id="el_ed_contacts"/>
+            <Portfolio id="el_ed_portfolio"/>
+            <Langs id="el_ed_langs"/>
+            <Education id="el_ed_education"/> 
+
+        </div>
+
+    </div>
+  </div> 
+
   </template>
   
 <script setup>
+import LeftSideEdit from '@/components/Edit/LeftSideEdit.vue'
+import Langs from '@/components/Edit/Langs.vue'
+import Name from '@/components/Edit/Name.vue'
+import Descr from '@/components/Edit/Descr.vue'
+import Contacts from '@/components/Edit/Contacts.vue'
+import Portfolio from '@/components/Edit/Portfolio.vue'
+import Education from '@/components/Edit/Education.vue'
+
+
  import { useProfileStore } from '@/stores/profile'
  import { storeToRefs } from "pinia"
 
@@ -57,13 +45,19 @@
 
 <style scoped>
 
-.grup{
-    width: 100%;
+
+
+.line{
+  width: 100%;
+  display: block;
+  height: 1px;
+  background-color: var(--color-line);
+
 }
-    .edit {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      gap: 16px;
-    }
+
+
+
+
+
+
 </style>
