@@ -2,11 +2,12 @@ import { ref  } from 'vue'
 import { defineStore } from 'pinia'
 import { useProfileStore } from './profile'
 
+
 export const useProjectsStore = defineStore('ProjectsStore', () => {
     let profile = useProfileStore();
     let AuthUserId = profile.AuthUserId
     let userId = profile.userId;
-    let SelectedLang = profile.SelectedLang;
+    let SelectedLang =profile.SelectedLang;
 
     let projects = ref([])
     let selectedProject = ref({})

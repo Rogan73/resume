@@ -129,6 +129,7 @@ line-height: 20px; /* 142.857% */
   .card, .card_exp{
   border-radius: 0px !important;
   width: 316px !important;
+  
   }
 
 }
@@ -161,6 +162,13 @@ line-height: 20px; /* 142.857% */
    border-radius: 16px;
    background: var(--surface-bg-secondary, #27272A);
    position: relative;
+   
+ }
+
+ .card3d {
+  /*background-image: linear-gradient(#343335,#1a191b) !important;*/
+  background-image: linear-gradient(163deg,#343335,#1f1f1f)  !important;
+  box-shadow: 0 30px 25px rgba(0,0,0,.5), inset 0 2px 2px #525154;
  }
 
  .card_content {
@@ -639,4 +647,27 @@ gap: 16px;
   .LeftSideEdit{
     display: none;
   }
+}
+
+.sh3d{
+  box-shadow: 0 30px 25px rgba(0,0,0,.5), inset 0 2px 2px #525154;
+  background-image: linear-gradient(#343335,#1a191b);
+}
+
+.smart-element-2 {
+  width: 220px;
+  height: 52px;
+  cursor: grab;
+  background-image: linear-gradient(#343335,#1a191b);
+  border-radius: 12px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 30px 25px rgba(0,0,0,.5), inset 0 2px 2px #525154;
 }

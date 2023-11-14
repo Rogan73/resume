@@ -16,7 +16,7 @@
             <Portfolio id="el_ed_portfolio"/>
             <Langs id="el_ed_langs"/>
             <Education id="el_ed_education"/> 
-
+            <Editor id="el_ed_editor"/>
         </div>
 
     </div>
@@ -32,6 +32,7 @@ import Descr from '@/components/Edit/Descr.vue'
 import Contacts from '@/components/Edit/Contacts.vue'
 import Portfolio from '@/components/Edit/Portfolio.vue'
 import Education from '@/components/Edit/Education.vue'
+import Editor from '@/components/Edit/Editor.vue'
 
 
  import { useProfileStore } from '@/stores/profile'

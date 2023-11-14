@@ -26,8 +26,8 @@ import Experience from '../components/Experience.vue'
 import { useProfileStore } from '../stores/profile'
 const store = useProfileStore()
 
-onMounted(() => {
-  store.LoadProfileFromJSON()
-})
+// onMounted(() => {
+//   store.LoadProfileFromJSON()
+// })
     </script>
     

@@ -3,8 +3,8 @@
     <h2>AUTH</h2>
     <input type="text" name="UserId" v-model="CurUserId">    
     <div class="flex_end">
-      <button class="btn" @click="SetAuth()">Login</button>
-      <button class="btn" @click="SetLogout()">Logout</button>
+      <button class="btn" @click="SetAuth()">{{t('Login')}}</button>
+      <button class="btn" @click="SetLogout()">{{t('Logout')}}</button>
     </div>
   </div>
 
@@ -12,6 +12,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { t } from "vui18n"
 import { useProfileStore } from '../stores/profile'
 const store = useProfileStore()
 const CurUserId = ref('001')

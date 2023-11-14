@@ -25,9 +25,9 @@
 </template>
    
 <script setup>
-import { useProjectsStore } from '../../stores/projects'
+import { useProfileStore } from '../../stores/profile'
 //import { storeToRefs } from "pinia"
-const store = useProjectsStore()
+const store = useProfileStore()
 //const { projects } = storeToRefs(store);
 
 

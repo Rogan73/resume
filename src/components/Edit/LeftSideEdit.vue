@@ -26,9 +26,16 @@ const store = useProfileStore()
 const scrollToElement = (link) => {
   let offset=10
   const element = document.getElementById(link);
+let of=0
+try {
+  of = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - offset
+} catch (error) {
+  console.log('error BoundingClientRect ',link);
+}
+
   window.scrollTo({
     behavior: 'smooth',
-    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - offset
+    top: of
   });
 }
 
