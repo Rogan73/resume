@@ -564,6 +564,7 @@ filter: brightness(1.3);
 width: 110px;
 }
 
+/*
 .btn_del:hover::before{
   content: 'Delete';
   padding-right: 10px;
@@ -572,7 +573,7 @@ width: 110px;
   text-align: left;
 
 }
-
+*/
 
 .grup{
   width: 100%;

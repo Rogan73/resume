@@ -8,6 +8,49 @@
   "telegram": "t.me/OlexandrRohan",
   "descr": "I am inspired by the development of new programs. I like it when my work is useful. I try to solve all assigned tasks in a short time and with high quality.",
   "portfolio": "RikoSoft",
+
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "middle",
+      "years": "3"
+    },
+    {
+      "name": "CSS/SCSS",
+      "level": "middle",
+      "years": "5"
+    },
+    {
+      "name": "JavaScript/Vue3",
+      "level": "middle",
+      "years": "3"
+    },
+    {
+      "name": "PHP",
+      "level": "middle",
+      "years": "5"
+    },
+    {
+      "name": "MySQL",
+      "level": "middle",
+      "years": "5"
+    }
+    ,
+    {
+      "name": "Delphi",
+      "level": "sinor",
+      "years": ">20"
+    }
+    ,
+    {
+      "name": "Firebird/SQL",
+      "level": "sinor",
+      "years": ">20"
+    }    
+
+  ],
+
+
   "langs": [
     {
       "name": "Ukranian",

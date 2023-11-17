@@ -48,6 +48,10 @@ export const useProfileStore = defineStore("ProfileStore", () => {
       link:'el_ed_portfolio'
     },
     {
+      name: t('Skills'),
+      link: 'el_ed_skills'
+    },
+    {
       name:t('Languages'),
       link:'el_ed_langs'
     },
@@ -59,6 +63,7 @@ export const useProfileStore = defineStore("ProfileStore", () => {
       name: t('Projects'),
       link: 'el_ed_editor'
     }
+
 
 ]
 
@@ -117,6 +122,7 @@ export const useProfileStore = defineStore("ProfileStore", () => {
       link =dir+'_profile.json'
       link2 =dir+'_projects.json'
       
+      
 
       const response = await fetch(link);
       if (!response.ok) {
@@ -150,6 +156,16 @@ const AddLang = () => {
 
 const DelLang = (idx) => {
    profile.value.langs.splice(idx, 1);
+}
+
+
+const AddSkills = () => {
+  let ln= { name: 'HTML', level: 'middle', years: "1"}
+   profile.value.skills.push(ln);
+}
+
+const DelSkills = (idx) => {
+   profile.value.skills.splice(idx, 1);
 }
 
 

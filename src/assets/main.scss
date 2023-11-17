@@ -65,6 +65,11 @@ padding-left: 5px;
  padding-bottom: 4px;
 }
 
+.text_center{
+  text-align: center;
+  width: 100%;
+}
+
 .i_gray{
  color: var(--icon-color-gray,#a1a1a9);
 }
@@ -556,7 +561,7 @@ background-color: var(--surface-bg-active);
     }
 
     &:hover::before{
-        content: 'Delete';
+        content: var(--btn_del_text,'Delete');
         padding-right: 10px;
         padding-left: 5px;
         width:100%;
@@ -565,6 +570,8 @@ background-color: var(--surface-bg-active);
     }
 
 }
+
+
 
 .grup{
  width: 100%;
@@ -615,6 +622,11 @@ gap: 16px;
    align-self: stretch;
 }
 
+.flex_col{
+  display: flex;
+  flex-direction: column;
+}
+
 .ed_del{
  margin-left: 18px;
  margin-top: 18px;
@@ -661,3 +673,43 @@ gap: 16px;
  position: relative;
  box-shadow: 0 30px 25px rgba(0,0,0,.5), inset 0 2px 2px #525154;
 }
+
+.w100{
+  width: 100%;
+}
+
+.card_main_line{
+    display: flex;
+    padding: 5px 0;
+    /*flex-direction: row;*/
+    align-items: center;
+/*    align-content: center;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+      & .col1{
+        width: 50%;
+      }
+
+      & .col{   
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*flex-grow: 1;*/
+        flex: 0 0 25%;
+
+
+        &:nth-child(1) {
+          justify-content: flex-start;
+          display: flex;
+        }
+        &:nth-child(2) {
+          justify-content: flex-end;
+          display: flex;
+        }    
+        &:nth-child(3) {
+          justify-content: flex-end;
+          display: flex;
+        }    
+
+      }    
+}
+

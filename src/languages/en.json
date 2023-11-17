@@ -10,5 +10,22 @@
    "Contacts": "Contacts",
    "Portfolio": "Portfolio",
    "Languages": "Languages",
-   "Education": "Education"
+   "Education": "Education",
+   "Skills": "Skills",
+   "Address": "Address",
+   "Phone": "Phone",
+   "Editor": "Editor",
+   "Title": "Title",
+   "Add": "Add",
+   "Period": "Period",
+   "Name": "Name",
+   "Level": "Level",
+   "Years": "Years",
+   "FIO": "Name",
+   "Professon": "Professon",
+   "Delete": "Delete"
+
+
+
+   
 }

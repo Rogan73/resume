@@ -13,7 +13,8 @@
     "icon": {
         "name": "engineering",
         "color": "blue"
-    }
+    },
+    "skills": "Delphi, SQL,Firebird,API,OLE,COM, Connect divices, MySQL, HTML, JavaScript, PHP, CSS/SCSS"
 },
 
 {
@@ -29,7 +30,8 @@
     "icon": {
         "name": "engineering",
         "color": "green"
-    }
+    },
+    "skills": "Delphi, SQL,Firebird,OLE, HTML, JavaScript, CSS/SCSS"
 },
 
 {
@@ -45,7 +47,8 @@
     "icon": {
         "name": "engineering",
         "color": "violet"
-    }
+    },
+    "skills": "Delphi, SQL,Access,API,OLE ,HTML, JavaScript/Vue3, CSS/SCSS"
 }
 
 ]

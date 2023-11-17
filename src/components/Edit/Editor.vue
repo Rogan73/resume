@@ -1,7 +1,7 @@
 <template>
     
     <div class="card">
-        <div class="card_title">Editor</div>
+        <div class="card_title">{{t('Editor')}}</div>
         <QuillEditor theme="snow"   v-model:content="editor"/>
         <!-- :modules="modules" -->
 
@@ -17,6 +17,7 @@
 </template>
 
 <script setup>
+import { t } from "vui18n"
 import {ref} from 'vue'
 import { useProfileStore } from '@/stores/profile'
 
