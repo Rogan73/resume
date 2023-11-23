@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "LIBRO",
+      "period": "2002 - наш час",
+      "location": "Херсон, Барселона, Валенсія",
+      "link": "https://rikosoft.com",
+      "description": {
+        "short": "Система для ресторанів, барів, кафе і т.д.",
+        "full_html": "Повний текст Libro"
+      },
+      "icon": {
+        "name": "engineering",
+        "color": "blue"
+      },
+      "skills": "Delphi, SQL, Firebird, API, OLE, COM, Підключення пристроїв, MySQL, HTML, JavaScript, PHP, CSS/SCSS"
+    },
+    {
+      "id": 2,
+      "name": "Magnat",
+      "period": "2005 - 2006",
+      "location": "Херсон",
+      "link": "https://rikosoft.com",
+      "description": {
+        "short": "Система для готелів",
+        "full_html": "Повний текст Magnat"
+      },
+      "icon": {
+        "name": "engineering",
+        "color": "green"
+      },
+      "skills": "Delphi, SQL, Firebird, OLE, HTML, JavaScript, CSS/SCSS"
+    },
+    {
+      "id": 3,
+      "name": "UPRRO",
+      "period": "2022 - наш час",
+      "location": "Валенсія",
+      "link": "https://rikosoft.com",
+      "description": {
+        "short": "Програмний фіскальний реєстратор",
+        "full_html": "Повний текст UPRRO"
+      },
+      "icon": {
+        "name": "engineering",
+        "color": "violet"
+      },
+      "skills": "Delphi, SQL, Access, API, OLE, HTML, JavaScript/Vue3, CSS/SCSS"
+    }
+  ]
+  

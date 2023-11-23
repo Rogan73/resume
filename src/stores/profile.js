@@ -1,6 +1,6 @@
 import {  ref  } from 'vue'
 import { defineStore } from 'pinia'
-import { t } from "vui18n"
+import { t,switchLang } from "vui18n"
 
 export const useProfileStore = defineStore("ProfileStore", () => {
   let profile = ref();
@@ -10,6 +10,7 @@ export const useProfileStore = defineStore("ProfileStore", () => {
 
    const SetAuth = (CurUserId) => {
     AuthUserId.value = CurUserId
+    userId.value = CurUserId
     authorization.value = AuthUserId.value == "001" ? true : false;
     localStorage.setItem("userId", CurUserId);
   };
@@ -17,7 +18,7 @@ export const useProfileStore = defineStore("ProfileStore", () => {
   const SetLogout = () => {
     localStorage.removeItem("userId");
     AuthUserId.value = ''
-    userId =''
+    userId.value =''
     location.reload();
   }
 
@@ -73,11 +74,11 @@ export const useProfileStore = defineStore("ProfileStore", () => {
     //console.log('setParamsFromUrl');
 
     const urlParams = new URLSearchParams(window.location.search);
-    userId = urlParams.get("id") || "";
-    SelectedLang = urlParams.get("lng") || "en";
+    userId.value = urlParams.get("id") || "";
+    SelectedLang.value = urlParams.get("lng") || "en";
 
-    if (userId == "") {
-      userId = localStorage.getItem("userId") || "";
+    if (userId.value == "") {
+      userId.value = localStorage.getItem("userId") || "";
       
     }
 
@@ -90,12 +91,17 @@ export const useProfileStore = defineStore("ProfileStore", () => {
 
   setParamsFromUrl();
 
+
+  
+
   const LoadProfileFromJSON = async () => {
     // if (AuthUserId.value == "") {
     //   return;
     // }
-  
-   //console.log('LoadProfileFromJSON');
+    //if (ln !=""){SelectedLang.value = ln}
+    
+
+   //console.log('LoadProfileFromJSON',SelectedLang.value);
    //console.log('AuthUserId.value',AuthUserId.value);
    //console.log('userId',userId);   
 
@@ -105,12 +111,12 @@ export const useProfileStore = defineStore("ProfileStore", () => {
       let link2 =''
       let dir =''   
       if (AuthUserId.value!="") {
-        dir = `/profiles/${AuthUserId.value}/${SelectedLang}`
+        dir = `/profiles/${AuthUserId.value}/${SelectedLang.value}`
         //link = `/profiles/${AuthUserId.value}/${SelectedLang}_profile.json`
         //link2 =`/profiles/${AuthUserId.value}/${SelectedLang}_projects.json`
       }else{
-         if (userId!="") {
-          dir = `/profiles/${userId}/${SelectedLang}`
+         if (userId.value!="") {
+          dir = `/profiles/${userId.value}/${SelectedLang.value}`
           //link = `/profiles/${userId}/${SelectedLang}_profile.json`
           //link2 = `/profiles/${userId}/${SelectedLang}_projects.json`
 
@@ -158,6 +164,10 @@ const DelLang = (idx) => {
    profile.value.langs.splice(idx, 1);
 }
 
+const ChangeLang = () => {
+  switchLang(SelectedLang.value)
+  LoadProfileFromJSON()
+}
 
 const AddSkills = () => {
   let ln= { name: 'HTML', level: 'middle', years: "1"}
@@ -190,12 +200,14 @@ const DelEd = (idx) => {
     AuthUserId,
     AddLang,
     DelLang,
+    ChangeLang,
     AddEd,
     DelEd,
     editList,
     selectedProject,
     projects,
-    selProject
-
+    selProject,
+    AddSkills,
+    DelSkills
   };
 });

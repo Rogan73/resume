@@ -1,7 +1,7 @@
 <template>
        <div class="custom-select">
         
-          <select class="listItems" v-model="store.SelectedLang" name="listLang" @change="switchLang(store.SelectedLang)" >
+          <select class="listItems" v-model="store.SelectedLang" name="listLang" @change="store.ChangeLang()" >
             <option v-for="(item,i) in langs" :key="i"
             >{{ item.code }}</option>
           </select>
@@ -14,11 +14,12 @@
 
 <script setup>
 import { ref,onMounted } from "vue";
-import {switchLang,getSelectedLanguage,getLanguages} from "vui18n"
+import {getSelectedLanguage,getLanguages} from "vui18n"
 import { useProfileStore } from '../stores/profile'
 const store = useProfileStore()
 let langs = ref(getLanguages())
  
+
 onMounted(() => {
   let {code}=getSelectedLanguage()
   store.SelectedLang = code

@@ -95,7 +95,7 @@ padding-left: 5px;
 }
 
 .sp_ar{
- justify-content: space-around;
+ /*justify-content: space-around;*/
 }
 
 .bold{
@@ -184,6 +184,8 @@ main {
   /*align-items: center;*/
   gap: 16px;
   align-self: stretch;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .card_img {

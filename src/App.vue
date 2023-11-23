@@ -26,7 +26,7 @@
           </template>
         </div>
                
-         <div>{{ store.AuthUserId }}</div>
+         <!-- <div>{{ store.AuthUserId }}</div> -->
 
         <ChangeLanguage />
         
@@ -44,11 +44,12 @@
 <script setup>
 import { t } from "vui18n"
 import { RouterLink, RouterView } from 'vue-router'
-import ChangeLanguage from './components/ChangeLanguage.vue'
-import { useProfileStore } from './stores/profile'
+import ChangeLanguage from '@/components/ChangeLanguage.vue'
+import { useProfileStore } from '@/stores/profile'
+import { useDBStore } from '@/stores/dbStore'
 import { onMounted } from 'vue'
 const store = useProfileStore()
-
+const DBStore = useDBStore()
 
 
 onMounted(() => {
